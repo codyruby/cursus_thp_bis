@@ -1,0 +1,41 @@
+Rédige les requêtes SQL ayant les fonctionnalités suivantes :
+
+Récupérer tous les albums :
+
+=> SELECT * FROM Albums;
+
+Récupérer tous les albums dont le titre contient "Great" (indice)
+
+=> SELECT * FROM albums WHERE title LIKE 'Great%';
+
+Donner le nombre total d'albums contenus dans la base (sans regarder les id bien sûr)
+
+=> SELECT COUNT(albumid) FROM Albums;
+
+Supprimer tous les albums dont le nom contient "music"
+
+=> DELETE FROM albums WHERE title LIKE '%music%';
+
+Récupérer tous les albums écrits par AC/DC
+
+=> SELECT * FROM albums WHERE artistid LIKE '1';
+
+Récupérer tous les titres des albums de AC/DC
+
+=> SELECT * FROM tracks WHERE composer LIKE 'AC/DC';
+
+Récupérer la liste des titres de l'album "Let There Be Rock"
+
+=> SELECT * FROM tracks WHERE Albumid LIKE '4';
+
+Afficher le prix de cet album ainsi que sa durée totale
+
+=>
+
+Afficher le coût de l'intégralité de la discographie de "Deep Purple"
+
+=>
+
+Créer l'album de ton artiste favori en base, en renseignant correctement les trois tables albums, artists et tracks
+
+=>

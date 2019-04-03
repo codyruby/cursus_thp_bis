@@ -1,0 +1,9 @@
+source "https://rubygems.org"
+ruby '2.3.4'  
+gem 'rspec'
+gem 'pry'
+gem 'rb-readline'
+gem 'rubocop', '~> 0.57.2'
+gem 'json'
+gem 'google_drive'
+gem 'csv'

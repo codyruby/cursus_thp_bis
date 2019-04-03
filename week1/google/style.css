@@ -1,0 +1,156 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header a{
+    font-size: medium;
+    color: #666;
+    text-decoration: none;
+}
+
+nav {
+    width: 300px;;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    outline: 0;  
+}
+
+main{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;  
+}
+
+#pad{
+    padding-top: 7px;
+}
+
+.buttom{
+	width:110px;
+	cursor:pointer;
+    text-transform:capitalize;
+    text-align:center;
+    padding:6px 10px 8px 3px;
+	font:bold 13px Arial;
+	background:#478bf9;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height:230px;
+    padding-bottom: 40px;
+    
+}
+
+.search-container{
+    width: 490px;
+    margin: 0 auto;
+  }
+ 
+input#search-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    border: 1px solid grey;
+    outline: none;
+}
+ 
+.search-icon{
+    position: relative;
+    float: right;
+    width: 15px;
+    height: 20px;
+    top: -30px;
+    right: -30px;
+}
+  
+#container{
+    display: flex;
+    justify-content: center;
+}
+
+#container-left{
+    border: 2px solid red;  
+    width:110px;
+	cursor:pointer;
+  
+    text-align:center;
+    padding:6px 10px 8px 3px;
+	font:bold 13px Arial;
+	background:#e4e5e7;
+	color:#fff;
+	border-radius:2px;
+	width:130px;
+	border:none;
+}
+
+#container-left:hover,#container-right:hover {
+	box-shadow: 0 1px 1px 0 grey;
+	color: black;
+	border: 1px solid #c6c6c6;
+}
+
+#block-container{
+    width:10px; 
+}
+
+#container-right{
+    border: 2px solid red;  
+    width:110px;
+	cursor:pointer;
+    text-align:center;
+    padding:6px 10px 8px 3px;
+	font:bold 13px Arial;
+	background:#e4e5e7;
+	color:#fff;
+	border-radius:2px;
+	width:130px;
+	border:none;
+}
+
+    
+footer {
+    background-color: #f7f3f3;
+    border: 2px solid red;  
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer-high {
+    height:50px;
+    border: 2px solid blue; 
+}
+
+.footer-low{
+    display: flex;
+    height:50px;
+    border: 2px solid green; 
+}
+
+#footer-left{
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-around;   
+} 
+
+#footer-right{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around;
+} 

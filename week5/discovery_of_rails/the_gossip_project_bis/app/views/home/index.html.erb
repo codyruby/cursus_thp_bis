@@ -1,0 +1,15 @@
+<h1>WELCOME TO THE GOSSIPS CENTER</h1>
+
+<% @gossips.each do |gossip_object| %>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">AUTHOR : 
+    <% user_first_name = @users.find(gossip_object.id) %>
+    <%= user_first_name.first_name %></h5>
+    <p class="card-text"><%= gossip_object.title %></p>
+    <%= link_to "Go to this Gossip Page", gossip_path(id: gossip_object.id), :class => "btn btn-primary" %>
+  </div>
+</div>
+ <% end %>
+
