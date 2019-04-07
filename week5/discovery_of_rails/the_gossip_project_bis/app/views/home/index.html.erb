@@ -5,10 +5,12 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">AUTHOR : 
-    <% user_first_name = @users.find(gossip_object.id) %>
-    <%= user_first_name.first_name %></h5>
+    <% @user_first_name = @users.find(gossip_object.user_id) %>
+    <%= @user_first_name.first_name %></h5>
     <p class="card-text"><%= gossip_object.title %></p>
-    <%= link_to "Go to this Gossip Page", gossip_id_path(id: gossip_object.id), :class => "btn btn-primary" %>
+    <%= link_to "Go to this Gossip Page", gossip_path(id: gossip_object.id), :class => "btn btn-primary" %><br /><br />
+    <%= link_to "Go to this User Page", user_id_path(id: gossip_object.user_id), :class => "btn btn-primary" %><br /><br />
+    <p><%= link_to "Create a New Gossip", new_gossip_path, :class => "btn btn-primary" %></p>
   </div>
 </div>
  <% end %>

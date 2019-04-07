@@ -11,19 +11,19 @@ require 'faker'
 #     c = City.create!(name: Faker::Address.city, zip_code: Faker::Address.zip_code)
 # end
 
-20.times do 
-    u = User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.paragraph, email: Faker::Internet.email, age: Faker::Number.between(12, 99), city_id: Faker::Number.between(1, 10))
-end
-
-# 20.times do 
-#     g = Gossip.create!(title: Faker::Lorem.word, content: Faker::Lorem.paragraph, user_id: Faker::Number.between(1, 10))
+# 10.times do 
+#     u = User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.paragraph, email: Faker::Internet.email, age: Faker::Number.between(12, 99), city_id: Faker::Number.between(841, 850))
 # end
+
+10.times do 
+    g = Gossip.create!(title: Faker::Lorem.word, content: Faker::Lorem.paragraph, user_id: Faker::Number.between(631, 640))
+end
 
 # 10.times do 
 #     t = Tag.create!(title: Faker::Books::CultureSeries.planet)
 # end
 
-# 5.times do 
+# 10.times do 
 #     pm = PrivateMessage.create!(content: Faker::Lorem.paragraph)
 # end
 

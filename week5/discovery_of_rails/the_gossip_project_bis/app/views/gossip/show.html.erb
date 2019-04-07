@@ -1,0 +1,18 @@
+<h1>Gossip <%= params[:id] %></h1>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h3 class="card-title">Title : 
+    <%= @gossip.title %></h3>
+    <h5 class="card-title">Content:</h5>
+    <p class="card-text"><%= @gossip.content %></p>
+    <h5 class="card-title">Author:</h5>
+    <p class="card-text"><%= @user.first_name + ' ' + @user.last_name %></p>
+     <h5 class="card-title">City:</h5>
+    <p class="card-text"><%= @city.name %></p>
+    <%= link_to "Go to the City Page", city_path(id: @city.id), :class => "btn btn-primary" %><br /><br />
+
+    <%= @gossip.created_at %><br/>
+    <%= link_to "Go to the User Page", user_id_path(id: @gossip.id), :class => "btn btn-primary" %> 
+  </div>
+</div>

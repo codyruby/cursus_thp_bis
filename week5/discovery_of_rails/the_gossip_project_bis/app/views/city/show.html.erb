@@ -1,0 +1,25 @@
+<h1>City: <%= @city.name %></h1>
+
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+   
+    <h5 class="card-title">All Gossip from <%= @city.name %>:</h5>
+    <p class="card-text"><%= @city.name %></p>
+
+    <% @users_city_ids.each do |gossip_city_id| %>
+    <% gossip_user = @gossips.where(user_id: gossip_city_id)%>
+    <% gossip_user_id = gossip_user.ids%>
+    <% gossip_city = @gossips.find(gossip_user_id)%>
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    
+    
+
+  </div>
+</div>
+    <% end %>
+    
+  </div>
+</div>
