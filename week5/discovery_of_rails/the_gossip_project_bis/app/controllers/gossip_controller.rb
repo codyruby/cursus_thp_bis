@@ -24,6 +24,10 @@ class GossipController < ApplicationController
     end
   end
 
+  def edit
+    @gossip = Gossip.find(params[:id])
+  end
+
   def update
     @gossip = Gossip.find(params[:id])
     if @gossip.update(:title => params[:title], :content => params[:content])
@@ -32,6 +36,12 @@ class GossipController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @gossip = Gossip.find(params[:id])
+    @gossip.destroy
+    redirect_to root_path
+end
 
 
 private

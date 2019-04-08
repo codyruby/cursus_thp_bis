@@ -11,8 +11,8 @@
      <h5 class="card-title">City:</h5>
     <p class="card-text"><%= @city.name %></p>
     <%= link_to "Go to the City Page", city_path(id: @city.id), :class => "btn btn-primary" %><br /><br />
-
-    <%= @gossip.created_at %><br/>
-    <%= link_to "Go to the User Page", user_id_path(id: @gossip.user_id), :class => "btn btn-primary" %> 
+    <%= link_to "Go to the User Page", user_id_path(id: @gossip.user_id), :class => "btn btn-primary" %><br /><br />
+    <%= link_to "Edit Gossip", edit_gossip_path, :class => "btn btn-default" %>
+    <%= link_to "Delete Gossip", gossip_path, :class => "btn btn-danger", method: :DELETE %>
   </div>
 </div>
