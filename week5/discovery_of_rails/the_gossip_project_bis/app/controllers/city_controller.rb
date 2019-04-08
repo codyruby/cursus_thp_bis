@@ -10,8 +10,6 @@ class CityController < ApplicationController
     @gossips = Gossip.all
     @cities_users = @users.where(city_id: params[:id])
     @users_city_ids = @cities_users.ids
-    
-    
-
   end
+  
 end
