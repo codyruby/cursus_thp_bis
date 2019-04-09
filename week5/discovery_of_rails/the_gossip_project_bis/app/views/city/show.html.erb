@@ -1,11 +1,13 @@
+<!-- La vue affiche le nom de la ville ainsi que tous les gossips des users qui habitent cette ville -->
 <h1>City: <%= @city.name %></h1><br />
   <h5 class="card-title">All Gossip from <%= @city.name %>:</h5><br />
 
-    <% @users_city_ids.each do |gossip_city_id| %>
+    <!-- Boucle qui parcours le tableau qui contient les numéros des users qui ont écrit un gossip dans la city -->
+    <% @users_city_ids.each do |number_user_id| %>
 
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <% gossip_by_user_id = Gossip.find_by(user_id: gossip_city_id)%>
+            <% gossip_by_user_id = Gossip.find_by(user_id: number_user_id)%>
             <h5 class="card-title">Title :</h5> 
             <%= gossip_by_user_id.title%><br /><br />
             <h5 class="card-title">Content :</h5> 

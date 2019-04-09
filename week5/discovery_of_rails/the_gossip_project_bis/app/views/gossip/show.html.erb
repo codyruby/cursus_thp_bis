@@ -1,3 +1,6 @@
+<!-- La vue d'un gossip -->
+
+<!-- Titre de la vue d'un gossip avec le numéro du gossip -->
 <h1>Gossip <%= params[:id] %></h1>
 
 <div class="card" style="width: 18rem;">
@@ -6,13 +9,17 @@
     <%= @gossip.title %></h3>
     <h5 class="card-title">Content:</h5>
     <p class="card-text"><%= @gossip.content %></p>
+
+    <!-- Information du user auteur du gossip -->
     <h5 class="card-title">Author:</h5>
     <p class="card-text"><%= @user.first_name + ' ' + @user.last_name %></p>
      <h5 class="card-title">City:</h5>
     <p class="card-text"><%= @city.name %></p>
+
+    <!-- Liens vers les différentes pages qui dépendent du gossip -->
     <%= link_to "Go to the City Page", city_path(id: @city.id), :class => "btn btn-primary" %><br /><br />
     <%= link_to "Go to the User Page", user_id_path(id: @gossip.user_id), :class => "btn btn-primary" %><br /><br />
-    <%= link_to "Edit Gossip", edit_gossip_path, :class => "btn btn-default" %>
+    <%= link_to "Edit Gossip", edit_gossip_path, :class => "btn btn-secondary" %>
     <%= link_to "Delete Gossip", gossip_path, :class => "btn btn-danger", method: :DELETE %>
   </div>
 </div>
